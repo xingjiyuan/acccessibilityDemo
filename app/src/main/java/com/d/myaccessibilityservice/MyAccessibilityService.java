@@ -11,7 +11,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 public class MyAccessibilityService extends AccessibilityService {
     private static final String TAG = "MyAccessibilityService";
     public static boolean canPull;
-    public static long interval;
+    public static long interval = 8000;
     Handler handler = new Handler();
     private String switchStr = "暂无最新订单";
     private GestureDescription gestureDescription;
