@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFloatingActivity">
+
+    <Button
+        android:id="@+id/show"
+        android:text="开始下拉"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/divider"
+        app:layout_constraintBaseline_toBaselineOf="@+id/interval_input"
+        app:layout_constraintLeft_toLeftOf="@id/show"
+        android:text="间隔"
+        android:textSize="28sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/interval_input"
+        app:layout_constraintTop_toBottomOf="@id/show"
+        app:layout_constraintLeft_toRightOf="@id/divider"
+        android:inputType="numberSigned"
+        android:hint="8"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/sec"
+        app:layout_constraintLeft_toRightOf="@id/interval_input"
+        app:layout_constraintBaseline_toBaselineOf="@+id/interval_input"
+        android:textSize="28sp"
+        android:text="秒"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/dismiss"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/show"
+        android:text="隐藏浮动按钮"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
