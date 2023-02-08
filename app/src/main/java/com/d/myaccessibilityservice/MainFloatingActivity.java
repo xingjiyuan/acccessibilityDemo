@@ -97,6 +97,22 @@ public class MainFloatingActivity extends AppCompatActivity {
                 }
             }
         });
+        findViewById(R.id.start_pull).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyAccessibilityService.canPull = true;
+            }
+        });
+        findViewById(R.id.stop_pull).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyAccessibilityService.canPull = true;
+                if (windowManager != null && floatingWindowView != null
+                        && floatingWindowView.isAttachedToWindow()) {
+                    windowManager.removeView(floatingWindowView);
+                }
+            }
+        });
     }
 
     public void show() {
